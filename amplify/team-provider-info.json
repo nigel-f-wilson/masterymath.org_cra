@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-masterymathorg-dev-155645-authRole",
+      "UnauthRoleArn": "arn:aws:iam::421377131745:role/amplify-masterymathorg-dev-155645-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::421377131745:role/amplify-masterymathorg-dev-155645-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-masterymathorg-dev-155645-deployment",
+      "UnauthRoleName": "amplify-masterymathorg-dev-155645-unauthRole",
+      "StackName": "amplify-masterymathorg-dev-155645",
+      "StackId": "arn:aws:cloudformation:us-east-1:421377131745:stack/amplify-masterymathorg-dev-155645/310aa550-dc6d-11ec-bdae-0e2666bde1a9",
+      "AmplifyAppId": "d336f091sil21t"
+    },
+    "categories": {
+      "auth": {
+        "masterymathorg89735bd1": {}
+      }
+    }
+  }
+}
