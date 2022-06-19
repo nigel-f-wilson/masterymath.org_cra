@@ -1,0 +1,19 @@
+{
+  "name": "masterymath.org",
+  "version": "1.0.0",
+  "description": "An app to help people track their progress at developing mental math fluency.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigel-f-wilson/masterymath.org.git"
+  },
+  "author": "Nigel F Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigel-f-wilson/masterymath.org/issues"
+  },
+  "homepage": "https://github.com/nigel-f-wilson/masterymath.org#readme"
+}
