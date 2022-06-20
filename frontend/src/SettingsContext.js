@@ -7,7 +7,10 @@ export const SettingsContext = createContext();
 
 export const SettingsContextProvider = props => {
   // COLOR THEME
-  const [colorTheme, setColorTheme] = useState("dark")
+  const [colorTheme, setColorTheme] = useState("dark")  // or "light"  
+
+  
+  
   const [navbarHidden, setNavbarHidden] = useState(false)
 
 
