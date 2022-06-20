@@ -6,7 +6,7 @@ import 'react-spinner-animated/dist/index.css'
 
 
 // PAGES
-import LandingPage from './pages/LandingPage'
+import WelcomePage from './pages/WelcomePage'
 
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 
@@ -45,7 +45,7 @@ export default function Router() {
   return (
     <Suspense fallback={renderLoader()}>
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="welcome" element={<WelcomePage />} />
 
         {/* <Route path="about" >
           <Route index element={<AboutIndexPage />} />
