@@ -45,7 +45,7 @@ export default function Router() {
   return (
     <Suspense fallback={renderLoader()}>
       <Routes>
-        <Route exact path="welcome" element={<WelcomePage />} />
+        <Route exact path="/" element={<WelcomePage />} />
 
         {/* <Route path="about" >
           <Route index element={<AboutIndexPage />} />
