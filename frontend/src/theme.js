@@ -10,46 +10,27 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     transparent: 'rgba(0, 0, 0, 0)',
-    connectFour: {
-      board: '#0039cb',       // blue
-      playerOne: '#d50000',   // red
-      playerTwo: '#ffea00',   // yellow
-      background: '#b3e5fc',  // light blue 
-      text: '#000000',        // black
+  
+    white: '#FFF',
+    lightGrey: '#EEE',
+    darkGrey: '#222',
+    black: '#000',
+
+    light: {
+      white: '#FFF',
+      lightGrey: '#EEE',
+      darkGrey: '#222',
+      black: '#000',
     },
-    magicSquareGames: {
-      playerOne: '#ffea00',   // yellow
-      playerTwo: '#1020ff',   // blue
-      unclaimed: '#fff',      // white
-      highlightWins: '#009900', // green
-      text: '#000000',        // black
+    dark: {
+      white: '#FFF',
+      lightGrey: '#EEE',
+      darkGrey: '#222',
+      black: '#000',
     },
-    backgrounds: {
-      light: '#FFFFFF',
-      dark: '#212121',
-    },
-    white: '#FFFFFF',
-    black: '#000000',
-    darkGrey: '#212121',
+
+
     
-    primary: {
-      light: '#669944',
-      main: '#2e6b12',
-      dark: '#004000',
-      contrastText: '#FFFFFF'
-    },
-    secondary: {
-      light: '#FFFFF',
-      main: '#669944',
-      dark: '#777777',
-      contrastText: '#000000'
-    },
-    text: {
-      primary: 'rgba(0, 0, 0, 0.87)',
-      secondary: 'rgba(0, 0, 0, 0.54)',
-      disabled: 'rgba(0, 0, 0, 0.38)',
-      hint: 'rgba(0, 0, 0, 0.38)',
-    },
     action: {
         disabledBackground: '#2e6b12',
         disabledOpacity: '0.5'
