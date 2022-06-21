@@ -9,7 +9,12 @@ export const SettingsContextProvider = props => {
   // COLOR THEME
   const [colorTheme, setColorTheme] = useState("dark")  // or "light"  
 
-  
+  function toggleColorTheme(event) {
+    event.preventDefault()
+    setColorTheme((prev) => (prev === "light") ? "dark" : "light")
+  }
+
+
   
   const [navbarHidden, setNavbarHidden] = useState(false)
 
@@ -38,7 +43,8 @@ export const SettingsContextProvider = props => {
     maxSquareSideLength,
 
     colorTheme,
-    setColorTheme,
+    // setColorTheme,
+    toggleColorTheme,
 
     navbarStyle,
     navbarHeightPx,
