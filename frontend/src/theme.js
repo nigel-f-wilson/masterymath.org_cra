@@ -51,6 +51,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          padding: '0px',
+        },
+      },
+    },
   },
   typography: {
     h1: {
