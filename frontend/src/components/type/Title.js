@@ -32,10 +32,10 @@ export default function Title(props) {
         //   fontSize: '4.2rem',
         //   lineHeight: '4.7rem',
         // },
-        // '@media (min-width: 900px)': {
-        //   fontSize: '5.0rem',
-        //   lineHeight: '6.0rem', 
-        // },
+        '@media (min-width: 900px)': {
+          fontSize: '11.0rem',
+          lineHeight: '12.0rem', 
+        },
       }}
     >
       { text }

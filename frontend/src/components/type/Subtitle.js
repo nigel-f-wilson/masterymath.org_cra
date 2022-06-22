@@ -25,9 +25,9 @@ export default function Subtitle(props) {
       sx={{
         padding: padding, 
         fontWeight: 700,
-        letterSpacing: '2px',
         fontSize: '1.8rem',
         lineHeight: '3.0rem',
+        letterSpacing: '2px',
         // '@media (min-width: 450px)': {
         //   fontSize: '3.8rem',
         //   lineHeight: '4.3rem',
@@ -36,10 +36,11 @@ export default function Subtitle(props) {
         //   fontSize: '4.2rem',
         //   lineHeight: '4.7rem',
         // },
-        // '@media (min-width: 900px)': {
-        //   fontSize: '5.0rem',
-        //   lineHeight: '6.0rem', 
-        // },
+        '@media (min-width: 900px)': {
+          fontSize: '4.0rem',
+          lineHeight: '5.0rem', 
+          letterSpacing: '3px',
+        },
       }}
     >
       { text }
