@@ -9,6 +9,7 @@ import Router from './Router'
 import theme from "./theme"
 import { ThemeProvider } from '@mui/material/styles';
 import { SettingsContextProvider } from './SettingsContext';
+import { LayoutContextProvider } from './LayoutContext';
 
 
 
@@ -19,10 +20,12 @@ export default function App() {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <SettingsContextProvider >
-          <FormspreeProvider project="1960964562039602920" >
-          {/* <FormspreeProvider project={process.env.REACT_APP_FORMSPREE_PROJECT_ID} > */}
-            <Router />
-          </FormspreeProvider>
+          <LayoutContextProvider >
+            <FormspreeProvider project="1960964562039602920" >
+              {/* <FormspreeProvider project={process.env.REACT_APP_FORMSPREE_PROJECT_ID} > */}
+              <Router />
+            </FormspreeProvider>
+          </LayoutContextProvider>
         </SettingsContextProvider>
       </ThemeProvider>
     </React.Fragment>
