@@ -8,7 +8,7 @@ export default function Title(props) {
   
   const { colorTheme } = useContext(SettingsContext)
 
-  const padding = (gutterBottom) ? "0 0 2rem" : "0"
+  const padding = (gutterBottom) ? "0 0 1rem" : "0"
 
   const textColor = (colorTheme === "dark") ? "white" : "black"
 
@@ -33,8 +33,8 @@ export default function Title(props) {
         //   lineHeight: '4.7rem',
         // },
         '@media (min-width: 900px)': {
-          fontSize: '11.0rem',
-          lineHeight: '12.0rem', 
+          fontSize: '9.0rem',
+          lineHeight: '9.3rem', 
         },
       }}
     >
