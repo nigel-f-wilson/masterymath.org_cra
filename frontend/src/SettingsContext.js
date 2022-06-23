@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 
 // Custom Hooks
-import { useScreenWidth, useScreenHeight } from "./hooks"
+import { useScreenWidth, useScreenHeight } from "./hooks/hooks"
 
 export const SettingsContext = createContext();
 
