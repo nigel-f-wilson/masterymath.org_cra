@@ -119,7 +119,7 @@ function ScrollLinks(props) {
       display='flex'
       justifyContent='space-evenly'    
     >
-      <Grid container mx={2} spacing={2} maxWidth='900px' >
+      <Grid container px={2} spacing={2} maxWidth='900px' >
         {
           links.map((item) => {
             const { label, to } = item
