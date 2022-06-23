@@ -11,7 +11,8 @@ export default function ButtonLabel(props) {
     gutterBottom = false, 
     fontFamily= 'roboto', 
     align = 'center',
-    icon, 
+    startIcon,
+    endIcon, 
     iconSize = 'lg'
   } = props
   
@@ -24,7 +25,13 @@ export default function ButtonLabel(props) {
 
   return (
     <React.Fragment>
-        <FontAwesomeIcon icon={icon} color={textColor} size={iconSize} />
+        {
+          startIcon ? (
+            <FontAwesomeIcon icon={startIcon} color={textColor} size={iconSize} />
+          ) : (
+            <></>
+          )
+        }
         <Box pr={1} />
         <Typography 
           children={text}
@@ -51,6 +58,13 @@ export default function ButtonLabel(props) {
             // },
           }}
         />
+        {
+          endIcon ? (
+            <FontAwesomeIcon icon={endIcon} color={textColor} size={iconSize} />
+          ) : (
+            <></>
+          )
+        }
     </React.Fragment>
   )
 }
