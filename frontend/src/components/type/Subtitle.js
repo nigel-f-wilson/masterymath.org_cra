@@ -14,17 +14,18 @@ export default function Subtitle(props) {
 
   const padding = (gutterBottom) ? "0 0 3rem" : "0"
 
-  const textColor = (colorTheme === "dark") ? "white" : "black"
+  const fontColor = (colorTheme === "dark") ? "white" : "black"
+  const fontWeight = (colorTheme === "dark") ? 400 : 700
 
 
   return (
     <Typography 
-      color={textColor}
+      color={fontColor}
       align={align}
       fontFamily={fontFamily}
       sx={{
         padding: padding, 
-        fontWeight: 700,
+        fontWeight: fontWeight,
         fontSize: '1.8rem',
         lineHeight: '3.0rem',
         letterSpacing: '2px',
@@ -37,8 +38,8 @@ export default function Subtitle(props) {
         //   lineHeight: '4.7rem',
         // },
         '@media (min-width: 900px)': {
-          fontSize: '4.0rem',
-          lineHeight: '5.0rem', 
+          fontSize: '3.25rem',
+          lineHeight: '3.5rem', 
           letterSpacing: '3px',
         },
       }}
