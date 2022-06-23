@@ -4,7 +4,11 @@ import { Typography } from '@mui/material';
 import { SettingsContext } from "../../SettingsContext";
 
 export default function Title(props) {
-  const { text, gutterBottom, fontFamily } = props
+  const { 
+    text, 
+    gutterBottom, 
+    fontFamily = "Amatic SC"
+  } = props
   
   const { colorTheme } = useContext(SettingsContext)
 
