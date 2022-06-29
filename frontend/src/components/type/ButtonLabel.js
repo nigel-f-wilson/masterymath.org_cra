@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-import { SettingsContext } from "../../SettingsContext";
+import { SettingsContext } from "../../contexts";
 
 export default function ButtonLabel(props) {
   const { text, 

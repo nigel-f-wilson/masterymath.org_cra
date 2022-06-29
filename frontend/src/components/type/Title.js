@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Typography } from '@mui/material';
 
-import { SettingsContext } from "../../SettingsContext";
+import { SettingsContext } from "../../contexts";
 
 export default function Title(props) {
   const { 

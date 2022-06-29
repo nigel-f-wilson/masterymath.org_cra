@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Typography } from '@mui/material';
 
-import { SettingsContext } from "../../SettingsContext";
+import { SettingsContext } from "../../contexts";
 
 export default function Subtitle(props) {
   const { text, 
@@ -27,7 +27,7 @@ export default function Subtitle(props) {
         padding: padding, 
         fontWeight: fontWeight,
         fontSize: '1.8rem',
-        lineHeight: '3.0rem',
+        lineHeight: '2.4rem',
         letterSpacing: '2px',
         // '@media (min-width: 450px)': {
         //   fontSize: '3.8rem',
