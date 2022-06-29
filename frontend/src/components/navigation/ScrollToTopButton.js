@@ -5,7 +5,7 @@ import { Box, Fade } from '@mui/material';
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
 
 import { useScrollPosition } from "../../hooks";
-import { ButtonLabel } from "../type";
+import { ButtonLabel } from "../text";
 import { LayoutContext } from "../../contexts";
 
 export default function ScrollToTopButton() {

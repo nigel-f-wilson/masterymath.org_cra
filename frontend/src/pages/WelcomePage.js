@@ -9,7 +9,7 @@ import { Box, Grid, MenuItem  } from '@mui/material';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 // CUSTOM
-import { Title, Subtitle, ButtonLabel } from "../components/type";
+import { Title, Subtitle, ButtonLabel } from "../components/text";
 import { Navbar, ScrollToTopButton } from "../components/navigation";
 import { SettingsContext, LayoutContext } from "../contexts";
 
