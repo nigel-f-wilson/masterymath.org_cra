@@ -11,8 +11,7 @@ import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 // CUSTOM
 import { Title, Subtitle, ButtonLabel } from "../components/type";
 import { Navbar, ScrollToTopButton } from "../components/navigation";
-import { SettingsContext } from "../SettingsContext";
-import { LayoutContext } from "../LayoutContext";
+import { SettingsContext, LayoutContext } from "../contexts";
 
 const sectionLinks = [
     {
@@ -65,7 +64,7 @@ function ScrollingPage(props) {
 function TitleSection(props) {
   const { id } = props
   return (
-    <Box id="title-section" sx={{ height: '100vh' }}  >
+    <Box id={id} sx={{ height: '100vh' }}  >
       <Header />
       <ScrollLinks height="20vh" />
     </Box>
@@ -126,9 +125,11 @@ function LandingSection(props) {
   return (
     <Box id={id} height='100vh' paddingTop={`${navbarHeightPx}px`} >
       <Title text={id} />
-          <HashLink smooth to="#top">
-            Top of Page
-          </HashLink>
+          
+      Content of each landing page
+
+
+
     </Box>
   )
 }
