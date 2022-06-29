@@ -5,29 +5,27 @@ import { Box, Fade } from '@mui/material';
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
 
 import { useScrollPosition } from "../../hooks";
-import { SettingsContext } from '../../SettingsContext';
 import { ButtonLabel } from "../type";
+import { LayoutContext } from "../../contexts";
 
-export default function ScrollToTopButton(props) {
-  let scrollPosition = useScrollPosition()
-
+export default function ScrollToTopButton() {
+  const { narrowScreen } = useContext(LayoutContext)
+  let iconSize = narrowScreen ? "2x" : "4x"
+  let insetFromCorner = narrowScreen ? "1.0rem" : "2.0rem"
+  let scrolledDown = (useScrollPosition() > 500)
+  
   return (
-    <Fade in={(scrollPosition > 500)} >
+    <Fade in={scrolledDown} >
       <Box 
         display="flex"
         position='fixed' 
-        bottom='1.0rem' 
-        right='1.0rem' 
-        width='2.0rem' 
-        flexDirection='row' 
-        justifyContent='start' 
-        alignItems='center' 
+        bottom={insetFromCorner} 
+        right={insetFromCorner} 
       >
         <HashLink smooth to="#top">
-          <ButtonLabel startIcon={faArrowCircleUp} iconSize="2x" />
+          <ButtonLabel startIcon={faArrowCircleUp} iconSize={iconSize} />
         </HashLink>
       </Box>
     </Fade>
-    
-  )
+  );
 }
