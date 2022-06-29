@@ -14,12 +14,12 @@ export default function Title(props) {
 
   const padding = (gutterBottom) ? "0 0 1rem" : "0"
 
-  const textColor = (colorTheme === "dark") ? "white" : "black"
+  const fontColor = (colorTheme === "dark") ? "white" : "black"
 
 
   return (
     <Typography 
-      color={textColor}
+      color={fontColor}
       align="center" 
       fontFamily={fontFamily}
       sx={{
