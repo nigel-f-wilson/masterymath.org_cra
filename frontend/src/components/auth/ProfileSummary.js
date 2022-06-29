@@ -8,7 +8,7 @@ import { LoginButton } from "../auth"
 
 export default function ProfileSummary(props) {
   const { user, isAuthenticated } = useAuth0();
-  const { name, email, picture } = user
+  // const { name, email, picture } = user
 
   const { colorTheme } = useContext(SettingsContext)
   const fontColor = (colorTheme === "dark") ? "white" : "black"
@@ -21,16 +21,16 @@ export default function ProfileSummary(props) {
       {!isAuthenticated && (
         <LoginButton />
       )}
-      {isAuthenticated && (
+      {isAuthenticated && user && (
         <>
           <Avatar
-            src={picture}
-            alt={name}
+            src={user.picture}
+            alt={user.name}
             sx={{ width: 60, height: 60, marginX: '15px' }}
           />
           <Stack  display='flex' flexDirection='column'  justifyContent='center' py='10px' >
-            <Typography variant='h4' children={name} />
-            <Typography variant='body1' children={email} />
+            <Typography variant='h4' children={user.name} />
+            <Typography variant='body1' children={user.email} />
           </Stack>
         </>
       )}
