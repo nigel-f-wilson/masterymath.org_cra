@@ -2,20 +2,16 @@ import React, { useContext, useState } from 'react'
 
 // THIRD PARTY
 import { Link as RouterLink } from 'react-router-dom';
-import { HashLink, NavHashLink } from 'react-router-hash-link';
-import { Box, AppBar , IconButton, Typography } from '@mui/material';
+import { Box, AppBar , IconButton } from '@mui/material';
 
 // ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 // CUSTOM
-import theme from '../../theme';
-import { SettingsContext } from '../../SettingsContext';
-import { LayoutContext } from '../../LayoutContext';
-import { Title, Subtitle } from "../type";
+import { SettingsContext, LayoutContext } from '../../contexts';
 import { MenuDrawer } from "./";
-
+import { LoginButton, LogoutButton } from '../auth';
 
 export default function Navbar(props) {
   const [drawerOpen, setDrawerOpen] = useState(false)
