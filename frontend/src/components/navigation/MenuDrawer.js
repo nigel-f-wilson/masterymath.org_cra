@@ -13,12 +13,13 @@ import { LightDarkModeToggle } from "./";
 import { LoginButton, LogoutButton, ProfileSummary } from '../auth';
 import { SettingsContext, LayoutContext } from '../../contexts';
 import { FlexRow } from "../layout";
+import { ButtonLabel, Paragraph, Subtitle } from '../text';
 
 
 export default function MenuDrawer(props) {
   const { drawerOpen, toggleDrawer } = props
 
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated, user } = useAuth0()
   const { colorTheme } = useContext(SettingsContext)
   const { navbarHeightPx } = useContext(LayoutContext)
   
@@ -50,8 +51,10 @@ export default function MenuDrawer(props) {
           />
         </Box>
 
-        <ProfileSummary />
-
+        <FlexRow height="80px" >
+          {!isAuthenticated && ( <ButtonLabel text="You are not signed in." /> )}
+          {isAuthenticated && ( <ProfileSummary user={user} /> )}
+        </FlexRow>
         <FlexRow height="5rem" border >
           {!isAuthenticated && ( <LoginButton /> )}
           {isAuthenticated && ( <LogoutButton /> )}
