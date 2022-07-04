@@ -9,10 +9,11 @@ import { Box, Grid, MenuItem  } from '@mui/material';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 // CUSTOM
-import { Title, Subtitle, ButtonLabel } from "../components/text";
+import { Title, Subtitle, Paragraph, ButtonLabel } from "../components/text";
 import { Navbar } from "../components/navigation";
 import { SettingsContext, LayoutContext } from "../contexts";
 import { ScrollingPage } from "../components/layout";
+import { LoginButton } from '../components/auth';
 
 const sectionLinks = [
     {
@@ -38,11 +39,11 @@ export default function WelcomePage() {
   return (
     <Box>
       <Navbar />
-      <ScrollingPage   >
-        <TitleSection id='' />
-        <LandingSection id='what' />
+      <ScrollingPage >
+        <TitleSection id='top' />
+        <WhatSection id='what' />
+        <HowSection id='how' />
         <LandingSection id='who' />
-        <LandingSection id='how' />
         <LandingSection id='why' />
       </ScrollingPage>
     </Box>
@@ -52,42 +53,26 @@ export default function WelcomePage() {
 function TitleSection(props) {
   const { id } = props
   return (
-    <Box id={id} sx={{ height: '100vh' }}  >
-      <Header />
+    <FullscreenLandingSection id={id} >
+      <Box pb={4} >
+        <Title text="Mastery" fontFamily="Amatic SC"  />
+        <Title text="Math" fontFamily="Amatic SC" gutterBottom />
+        <Subtitle text="Your step-by-step guide" fontFamily="Amatic SC"  />
+        <Subtitle text="to a strong foundation" fontFamily="Amatic SC"  />
+        <Subtitle text="in mental computation." fontFamily="Amatic SC"  />
+      </Box>
+      <Box pb={4} >
+        <LoginButton />
+      </Box>
       <ScrollDownLinks height="20vh" />
-    </Box>
+    </FullscreenLandingSection>
   )
 }
-
-function Header() {
-  return (
-    <Box padding='5vh 0 7vh' >
-      <Title text="Mastery" fontFamily="Amatic SC"  />
-      <Title text="Math" fontFamily="Amatic SC" gutterBottom />
-      <Subtitle text="Your step-by-step guide" fontFamily="Amatic SC"  />
-      <Subtitle text="to a strong foundation" fontFamily="Amatic SC"  />
-      <Subtitle text="in mental computation." fontFamily="Amatic SC"  />
-    </Box>
-  )
-}
-
-// function SignInButton() {
-  
-  
-//   return (
-//     <MenuItem component={HashLink} to={props.to} smooth ref={ref} >
-//       <Box border={`solid ${fontColor} 1px`} borderRadius={4} height='2.7rem' width='100%' display='flex' justifyContent='center' alignItems='center' >
-//         <ButtonLabel text={props.label} fontFamily="roboto" startIcon={faArrowCircleDown} />
-//       </Box>
-//     </MenuItem>
-//   )
-// }
 
 function ScrollDownLinks(props) {
   const { height } = props
   const { colorTheme } = useContext(SettingsContext)
   const fontColor = (colorTheme === "dark") ? "white" : "black"
-  
   const ScrollLink = React.forwardRef((props, ref) => (
     <MenuItem component={HashLink} to={props.to} smooth ref={ref} >
       <Box border={`solid ${fontColor} 1px`} borderRadius={4} height='2.7rem' width='100%' display='flex' justifyContent='center' alignItems='center' >
@@ -95,14 +80,13 @@ function ScrollDownLinks(props) {
       </Box>
     </MenuItem>
   ))
-
   return (
     <Box 
       height={height} 
       display='flex'
       justifyContent='space-evenly'    
     >
-      <Grid container px={2} spacing={2} maxWidth='800px' >
+      <Grid container spacing={2} maxWidth='800px' >
         {
           sectionLinks.map((item) => {
             const { label, to } = item
@@ -118,18 +102,111 @@ function ScrollDownLinks(props) {
   )
 }
 
+
+function WhatSection(props) {
+  const { id } = props
+  const { navbarHeightPx } = useContext(LayoutContext)
+  const navHeight = `${navbarHeightPx}px`
+
+  return (
+    <FullscreenLandingSection id={id} >
+      <Title text={id} />
+      <Subtitle 
+        fontFamily="Amatic SC" 
+        text="A checklist of math skills" 
+        gutterBottom
+      />
+
+      <Paragraph 
+        text="At its core, Mastery Math is simply a list of skills combined with a dashboard that enables learners to easily track their progress and decide what to practice next."
+      />
+      <Paragraph 
+        text="These skills relate to basic numeracy and they build on one another. Like a video game, Mastery Math prevents users from moving on to the next level until they beat the ones that come before it."
+      />
+      <Paragraph 
+        text="In order to set students up for success, Mastery Math does not take into account a learner's age or grade level in school. In Mastery Math everyone starts at the beginning. Like a video game, Mastery Math prevents users from moving on to the next level until they beat the ones that come before it."
+      />
+    </FullscreenLandingSection>
+  )
+}
+
+function HowSection(props) {
+  const { id } = props
+  const { navbarHeightPx } = useContext(LayoutContext)
+
+  return (
+    <FullscreenLandingSection id={id} >
+      <Title text={id} />
+      <Subtitle 
+        fontFamily="Amatic SC" 
+        text="A checklist of math skills" 
+        gutterBottom
+      />
+
+      <Paragraph 
+        text="At its core, Mastery Math is simply a list of skills combined with a dashboard that enables learners to easily track their progress and decide what to practice next."
+      />
+      <Paragraph 
+        text="These skills relate to basic numeracy and they build on one another. The number one reason that people start to dislike math is that they are pushed to move on to the next topic before fully mastering what came before. Doing this gives kids the sense that even basic computation is shrouded in mystery. Even if you can do basic arithmetic on paper,   The important thing is not a learner's age or grade in school"
+      />
+          
+
+    </FullscreenLandingSection>
+  )
+}
+
+function FullscreenLandingSection(props) {
+  const { id, children } = props
+  const { navbarHeightPx } = useContext(LayoutContext)
+  return (
+    <Box id={id} 
+      height='100vh' 
+      paddingX={2}
+      paddingTop={`${navbarHeightPx}px`}
+    >
+      {children}
+    </Box>
+  )
+}
+
 function LandingSection(props) {
   const { id } = props
   const { navbarHeightPx } = useContext(LayoutContext)
 
   return (
-    <Box id={id} height='100vh' paddingTop={`${navbarHeightPx}px`} >
+    <FullscreenLandingSection>
       <Title text={id} />
       <Subtitle fontFamily="Amatic SC" text="Mastery Math is a checklist of math skills." />
           
 
 
 
-    </Box>
+    </FullscreenLandingSection>
   )
 }
+
+// function PhilosophySection(props) {
+//   const { id } = props
+//   const { navbarHeightPx } = useContext(LayoutContext)
+//   const navHeight = `${navbarHeightPx}px`
+
+//   return (
+//     <Box id={id} 
+//       height='100vh' 
+//       paddingTop={navHeight}
+//     >
+//       <Title text={id} />
+//       <Subtitle 
+//         fontFamily="Amatic SC" 
+//         text="A checklist of math skills" 
+
+//       />
+
+//       <Paragraph 
+//         text="We have a saying at Mastery Math, \"It's Ok to move Fast, as long as you're not in a Hurry."
+//       />
+          
+
+//     </Box>
+//   )
+// }
