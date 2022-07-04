@@ -9,7 +9,7 @@ import { SettingsContext } from "../../contexts";
 export default function ButtonLabel(props) {
   const { text, 
     gutterBottom = false, 
-    fontFamily= 'roboto', 
+    fontFamily = 'roboto', 
     align = 'center',
     startIcon,
     endIcon, 
