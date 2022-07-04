@@ -12,6 +12,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { LightDarkModeToggle } from "./";
 import { LoginButton, LogoutButton, ProfileSummary } from '../auth';
 import { SettingsContext, LayoutContext } from '../../contexts';
+import { FlexRow } from "../layout";
 
 
 export default function MenuDrawer(props) {
@@ -50,7 +51,11 @@ export default function MenuDrawer(props) {
         </Box>
 
         <ProfileSummary />
-          
+
+        <FlexRow height="5rem" border >
+          {!isAuthenticated && ( <LoginButton /> )}
+          {isAuthenticated && ( <LogoutButton /> )}
+        </FlexRow>  
 
         <Typography variant='h3' children='About' />
 
@@ -58,11 +63,7 @@ export default function MenuDrawer(props) {
         
         <Typography variant='h3' children='Resources' />
 
-        <Box width='100%' border='solid red 1px' height='8rem' >
-          
-          {!isAuthenticated && ( <LoginButton /> )}
-          {isAuthenticated && ( <LogoutButton /> )}
-        </Box>
+        
         
         <LightDarkModeToggle />
       
