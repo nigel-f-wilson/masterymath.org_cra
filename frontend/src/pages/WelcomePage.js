@@ -10,8 +10,9 @@ import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 // CUSTOM
 import { Title, Subtitle, ButtonLabel } from "../components/text";
-import { Navbar, ScrollToTopButton } from "../components/navigation";
+import { Navbar } from "../components/navigation";
 import { SettingsContext, LayoutContext } from "../contexts";
+import { ScrollingPage } from "../components/layout";
 
 const sectionLinks = [
     {
@@ -48,25 +49,12 @@ export default function WelcomePage() {
   )
 }
 
-function ScrollingPage(props) {
-  const { colorTheme } = useContext(SettingsContext)
-  const bgColor = (colorTheme === "dark") ? "black" : "white"
-  // const fontColor = (colorTheme === "dark") ? "white" : "black"
-  return (
-    <Box bgcolor={bgColor} >
-      {props.children}
-      <ScrollToTopButton />
-    </Box>
-  )
-  
-}
-
 function TitleSection(props) {
   const { id } = props
   return (
     <Box id={id} sx={{ height: '100vh' }}  >
       <Header />
-      <ScrollLinks height="20vh" />
+      <ScrollDownLinks height="20vh" />
     </Box>
   )
 }
@@ -83,7 +71,19 @@ function Header() {
   )
 }
 
-function ScrollLinks(props) {
+// function SignInButton() {
+  
+  
+//   return (
+//     <MenuItem component={HashLink} to={props.to} smooth ref={ref} >
+//       <Box border={`solid ${fontColor} 1px`} borderRadius={4} height='2.7rem' width='100%' display='flex' justifyContent='center' alignItems='center' >
+//         <ButtonLabel text={props.label} fontFamily="roboto" startIcon={faArrowCircleDown} />
+//       </Box>
+//     </MenuItem>
+//   )
+// }
+
+function ScrollDownLinks(props) {
   const { height } = props
   const { colorTheme } = useContext(SettingsContext)
   const fontColor = (colorTheme === "dark") ? "white" : "black"
@@ -125,8 +125,8 @@ function LandingSection(props) {
   return (
     <Box id={id} height='100vh' paddingTop={`${navbarHeightPx}px`} >
       <Title text={id} />
+      <Subtitle fontFamily="Amatic SC" text="Mastery Math is a checklist of math skills." />
           
-      Content of each landing page
 
 
 
