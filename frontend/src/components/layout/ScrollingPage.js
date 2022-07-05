@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import { Box } from '@mui/material';
 
 // CUSTOM
-import { ScrollToTopButton } from "../navigation";
+import { ScrollToTopButton } from "../buttons";
 import { SettingsContext } from "../../contexts";
 
 export default function ScrollingPage(props) {
@@ -12,7 +12,7 @@ export default function ScrollingPage(props) {
   const bgColor = (colorTheme === "dark") ? "black" : "white"
   // const fontColor = (colorTheme === "dark") ? "white" : "black"
   return (
-    <Box bgcolor={bgColor} >
+    <Box bgcolor={bgColor} display="flex" flexDirection="column" alignItems="center" >
       {props.children}
       <ScrollToTopButton />
     </Box>

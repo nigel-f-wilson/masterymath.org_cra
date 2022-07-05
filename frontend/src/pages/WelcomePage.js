@@ -13,7 +13,7 @@ import { Title, Subtitle, Paragraph, ButtonLabel } from "../components/text";
 import { Navbar } from "../components/navigation";
 import { SettingsContext, LayoutContext } from "../contexts";
 import { ScrollingPage } from "../components/layout";
-import { LoginButton } from '../components/auth';
+import { LoginButton } from '../components/buttons';
 
 const sectionLinks = [
     {

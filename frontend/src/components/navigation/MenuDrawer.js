@@ -10,7 +10,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 // CUSTOM
 import { LightDarkModeToggle } from "./";
-import { LoginButton, LogoutButton, ProfileSummary } from '../auth';
+import { LoginButton, LogoutButton } from '../buttons';
+import { ProfileSummary } from '../auth';
 import { SettingsContext, LayoutContext } from '../../contexts';
 import { FlexRow } from "../layout";
 import { ButtonLabel, Paragraph, Subtitle } from '../text';
