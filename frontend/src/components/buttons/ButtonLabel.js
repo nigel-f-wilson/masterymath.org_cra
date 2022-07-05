@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import { Box, Typography } from '@mui/material';
 
+// THIRD PARTY
+import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
+// INTERNAL
 import { SettingsContext } from "../../contexts";
 
 export default function ButtonLabel(props) {
