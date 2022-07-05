@@ -6,7 +6,7 @@ import { SettingsContext } from "../../contexts";
 export default function Subtitle(props) {
   const { text, 
     gutterBottom = false, 
-    fontFamily= 'roboto', 
+    fontFamily= "Amatic SC", 
     align = 'center' 
   } = props
   
