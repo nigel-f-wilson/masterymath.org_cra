@@ -1,19 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // THIRD PARTY
-import { useAuth0 } from "@auth0/auth0-react";
 import { Stack, Avatar, Typography } from '@mui/material';
 
 // INTERNAL
-import { FlexRow } from "../layout";
-
-import { SettingsContext } from "../../contexts";
 
 export default function ProfileSummary(props) {
   // const { user, isAuthenticated } = useAuth0();
   const { name, email, picture } = props.user
-
-  const { colorTheme } = useContext(SettingsContext)
 
   console.log(`USER: ${JSON.stringify(props.user,null,4)}`);
 

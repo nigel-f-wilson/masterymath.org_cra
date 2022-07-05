@@ -14,9 +14,7 @@ import { LoginButton, LogoutButton } from '../buttons';
 import { ProfileSummary } from '../auth';
 import { SettingsContext, LayoutContext } from '../../contexts';
 import { FlexRow } from "../layout";
-import { Paragraph, Subtitle } from '../text';
 import { ButtonLabel } from '../buttons';
-
 
 export default function MenuDrawer(props) {
   const { drawerOpen, toggleDrawer } = props
