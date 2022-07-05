@@ -30,7 +30,7 @@ export default function Title(props) {
         fontWeight: 700,
         letterSpacing: '5px',
         fontSize: '6.0rem',
-        lineHeight: '6.5rem',
+        lineHeight: '6.3rem',
         // '@media (min-width: 450px)': {
         //   fontSize: '3.8rem',
         //   lineHeight: '4.3rem',
