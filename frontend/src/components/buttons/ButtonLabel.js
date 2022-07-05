@@ -17,12 +17,10 @@ export default function ButtonLabel(props) {
     iconSize = 'lg'
   } = props
   
-  const { colorTheme } = useContext(SettingsContext)
-
   const padding = (gutterBottom) ? "0 0 3rem" : "0"
-
+  
+  const { colorTheme } = useContext(SettingsContext)
   const textColor = (colorTheme === "dark") ? "white" : "black"
-
 
   return (
     <React.Fragment>
