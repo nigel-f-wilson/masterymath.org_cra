@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 
+// THIRD PARTY
 import { HashLink } from 'react-router-hash-link';
 import { Box, Fade } from '@mui/material';
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
 
-import { useScrollPosition } from "../../hooks";
-import { ButtonLabel } from "../text";
+// INTERNAL
+import { ButtonLabel } from "./";
 import { LayoutContext } from "../../contexts";
+import { useScrollPosition } from "../../hooks";
 
 export default function ScrollToTopButton() {
   const { narrowScreen } = useContext(LayoutContext)
