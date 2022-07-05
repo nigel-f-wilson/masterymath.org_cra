@@ -1,27 +1,26 @@
 import React, { useContext } from 'react'
-import { Box, Typography } from '@mui/material';
 
+// THIRD PARTY
+import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
+// INTERNAL
 import { SettingsContext } from "../../contexts";
 
 export default function ButtonLabel(props) {
   const { text, 
     gutterBottom = false, 
-    fontFamily= 'roboto', 
+    fontFamily = 'roboto', 
     align = 'center',
     startIcon,
     endIcon, 
     iconSize = 'lg'
   } = props
   
-  const { colorTheme } = useContext(SettingsContext)
-
   const padding = (gutterBottom) ? "0 0 3rem" : "0"
-
+  
+  const { colorTheme } = useContext(SettingsContext)
   const textColor = (colorTheme === "dark") ? "white" : "black"
-
 
   return (
     <React.Fragment>

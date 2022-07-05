@@ -5,7 +5,7 @@ import "./lightDarkModeToggle.css";
 import { Box } from '@mui/material';
 
 import { SettingsContext } from '../../contexts';
-import { ButtonLabel } from "../text";
+import { ButtonLabel } from "../buttons";
 
 export default function LightDarkModeToggle(props) {
   const { colorTheme, toggleColorTheme } = useContext(SettingsContext)

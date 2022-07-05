@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 
 // THIRD PARTY
-import { Link as RouterLink } from 'react-router-dom';
 import { Box, AppBar , IconButton } from '@mui/material';
 
 // ICONS
@@ -11,14 +10,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 // CUSTOM
 import { SettingsContext, LayoutContext } from '../../contexts';
 import { MenuDrawer } from "./";
-import { LoginButton, LogoutButton } from '../auth';
 
 export default function Navbar(props) {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   const { colorTheme } = useContext(SettingsContext)
   const { navbarHeightPx } = useContext(LayoutContext)
-
 
   const bgColor = (colorTheme === "dark") ? "darkGrey" : "lightGrey"
   const fontColor = (colorTheme === "dark") ? "white" : "black"

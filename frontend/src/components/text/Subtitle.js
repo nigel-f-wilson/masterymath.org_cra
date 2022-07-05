@@ -6,13 +6,13 @@ import { SettingsContext } from "../../contexts";
 export default function Subtitle(props) {
   const { text, 
     gutterBottom = false, 
-    fontFamily= 'roboto', 
+    fontFamily= "Amatic SC", 
     align = 'center' 
   } = props
   
   const { colorTheme } = useContext(SettingsContext)
 
-  const padding = (gutterBottom) ? "0 0 3rem" : "0"
+  const padding = (gutterBottom) ? "0 0 1.0rem" : "0"
 
   const fontColor = (colorTheme === "dark") ? "white" : "black"
   const fontWeight = (colorTheme === "dark") ? 400 : 700
