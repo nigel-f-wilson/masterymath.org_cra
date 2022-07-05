@@ -13,27 +13,7 @@ import { Title, Subtitle, Paragraph, ButtonLabel } from "../components/text";
 import { Navbar } from "../components/navigation";
 import { SettingsContext, LayoutContext } from "../contexts";
 import { ScrollingPage } from "../components/layout";
-import { LoginButton } from '../components/buttons';
-
-const sectionLinks = [
-    {
-      label: "What?",
-      to: "#what",
-    },
-    {
-      label: "Who?",
-      to: "#who",
-    },
-    {
-      label: "How?",
-      to: "#how",
-    },
-    {
-      label: "Why?",
-      to: "#why",
-    },
-  ]
-
+import { LoginButton, LandingScrollDownButtons, PageLinkButton } from '../components/buttons';
 
 export default function WelcomePage() {
   return (
@@ -68,40 +48,6 @@ function TitleSection(props) {
     </FullscreenLandingSection>
   )
 }
-
-function ScrollDownLinks(props) {
-  const { height } = props
-  const { colorTheme } = useContext(SettingsContext)
-  const fontColor = (colorTheme === "dark") ? "white" : "black"
-  const ScrollLink = React.forwardRef((props, ref) => (
-    <MenuItem component={HashLink} to={props.to} smooth ref={ref} >
-      <Box border={`solid ${fontColor} 1px`} borderRadius={4} height='2.7rem' width='100%' display='flex' justifyContent='center' alignItems='center' >
-        <ButtonLabel text={props.label} fontFamily="roboto" startIcon={faArrowCircleDown} />
-      </Box>
-    </MenuItem>
-  ))
-  return (
-    <Box 
-      height={height} 
-      display='flex'
-      justifyContent='space-evenly'    
-    >
-      <Grid container spacing={2} maxWidth='800px' >
-        {
-          sectionLinks.map((item) => {
-            const { label, to } = item
-            return (
-              <Grid item xs={6} sm={3} key={`grid-link-to-${item.to}`} >
-                <ScrollLink label={label} to={to} />
-              </Grid>
-            )
-          })
-        }
-      </Grid>
-    </Box>
-  )
-}
-
 
 function WhatSection(props) {
   const { id } = props
