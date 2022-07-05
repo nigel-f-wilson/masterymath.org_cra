@@ -1,19 +1,49 @@
 {
-  "name": "masterymath.org",
-  "version": "1.0.0",
-  "description": "An app to help people track their progress at developing mental math fluency.",
-  "main": "index.js",
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-react": "1.10.2",
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@formspree/react": "2.2.5",
+    "@fortawesome/fontawesome-free": "6.1.1",
+    "@fortawesome/fontawesome-svg-core": "6.1.1",
+    "@mui/icons-material": "5.8.4",
+    "@mui/material": "5.8.4",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.3.0",
+    "@testing-library/user-event": "13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6.3.0",
+    "react-router-hash-link": "2.4.3",
+    "react-scripts": "5.0.1",
+    "react-spinner-animated": "3.1.1",
+    "web-vitals": "2.1.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nigel-f-wilson/masterymath.org.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "Nigel F Wilson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nigel-f-wilson/masterymath.org/issues"
-  },
-  "homepage": "https://github.com/nigel-f-wilson/masterymath.org#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
