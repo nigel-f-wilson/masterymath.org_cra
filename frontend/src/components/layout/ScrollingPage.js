@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 // THIRD PARTY
 import { Box } from '@mui/material';
 
-// CUSTOM
+// INTERNAL
 import { ScrollToTopButton } from "../buttons";
 import { SettingsContext } from "../../contexts";
 

@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
+
+// THIRD PARTY
 import { Typography } from '@mui/material';
 
+// INTERNAL
 import { SettingsContext } from "../../contexts";
 
 export default function Title(props) {

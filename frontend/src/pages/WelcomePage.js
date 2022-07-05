@@ -8,8 +8,8 @@ import { Box, Grid, MenuItem  } from '@mui/material';
 // ICONS
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 
-// CUSTOM
 import { Title, Subtitle, Paragraph, ButtonLabel } from "../components/text";
+// INTERNAL
 import { Navbar } from "../components/navigation";
 import { SettingsContext, LayoutContext } from "../contexts";
 import { ScrollingPage } from "../components/layout";
