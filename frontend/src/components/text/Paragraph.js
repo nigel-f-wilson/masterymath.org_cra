@@ -7,7 +7,8 @@ import { SettingsContext } from "../../contexts";
 export default function Paragraph(props) {
   const { 
     text,
-    fontFamily = "roboto"
+    fontFamily = "roboto",
+    gutterBottom = false
   } = props
   const { colorTheme } = useContext(SettingsContext)
   const textColor = (colorTheme === "dark") ? "white" : "black"
@@ -19,7 +20,7 @@ export default function Paragraph(props) {
       fontFamily={fontFamily}
       align="justify" 
       variant="body1"
-      gutterBottom
+      gutterBottom={gutterBottom}
       sx={{
         fontSize: '0.9rem',
         [theme.breakpoints.up('sm')]: {
