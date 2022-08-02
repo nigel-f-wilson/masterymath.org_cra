@@ -9,6 +9,7 @@ import 'react-spinner-animated/dist/index.css'
 import WelcomePage from './pages/WelcomePage'
 
 const ContactPage = lazy(() => import('./pages/ContactPage'))
+const TestPage = lazy(() => import('./pages/TestPage'))
 
 
 // ABOUT
@@ -83,6 +84,8 @@ export default function Router() {
           <Route path="you" element={<Join />} />
         </Route> */}
         <Route path="contact" element={<ContactPage />} />
+        <Route path="test" element={<TestPage />} />
+
       </Routes>
 
     </Suspense>
